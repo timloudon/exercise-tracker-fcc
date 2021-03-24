@@ -1,0 +1,31 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background: #000;
+  /* text-align: center; */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  max-width: fit-content;
+}
+
+form > input:not(.submit) {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#add-exercise {
+  padding-left: 20px;
+}
+
+.submit {
+  align-self: start;
+}
+
+#get {
+  padding-left: 10px;
+}

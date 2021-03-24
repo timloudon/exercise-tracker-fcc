@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css">
+	<title>Exercise Tracker</title>
+</head>
+
+<body>
+	<h1>Exercise Tracker</h1>
+	<div class="grid">
+		<form id="add-user" action="/api/exercise/new-user" method="post">
+			<h3>Create New User</h3>
+			<p>
+				<code>POST /api/exercise/new-user</code>
+      </p>
+      <input type="text" id="uname" name="username" placeholder="Create a new user" autocomplete="off">
+      <input type="submit" class="submit" value="Submit">
+    </form>
+    <form id="add-exercise" action="/api/exercise/add" method="post">
+      <h3>Add An Exercise</h3>
+      <p>
+        <code>POST /api/exercise/add</code>
+      </p>
+      <input type="text" id="uid" name="userId" placeholder="user id*" autocomplete="off">
+      <input type="text" id="desc" name="description" placeholder="description*" autocomplete="off">
+      <input type="number" id="dur" name="duration" placeholder="duration* (mins)" autocomplete="off">
+      <input type="text" id="dat" name="date" placeholder="date (yyyy-mm-dd)" autocomplete="off">
+      <input type="submit" class="submit" value="Submit">
+    </form>
+  </div>
+	<p>GET users's exercise log: </p>
+    <p><code id="get">GET /api/exercise/log?{userId}[&from][&to][&limit]</code></p>
+	<p>{ } = required, [ ] = optional</p>
+	<p>from, to = dates (yyyy-mm-dd); limit = number</p>
+</body>
+
+</html>
